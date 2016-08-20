@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Canvas Pen - by d2phap</title>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/easeljs-0.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/FileSaver.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<div class="app">
+		<ul id="toolbar">
+			<li class="btn btn-save" title="Save image">
+				<label></label>
+			</li>
+			<li class="btn btn-eraser left" title="Clear the board">
+				<label></label>
+			</li>
+			
+			<li class="btn-color blue" title="Blue brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-blue" value="#00bfff">
+				<label for="brush-blue"></label>
+			</li>
+			<li class="btn-color green" title="Green brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-green" value="#39bd68">
+				<label for="brush-green"></label>
+			</li>
+			<li class="btn-color red" title="Red brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-red" value="#ff1556">
+				<label for="brush-red"></label>
+			</li>
+			<li class="btn-color purple" title="Purple brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-purple" value="#c000ff">
+				<label for="brush-purple"></label>
+			</li>
+			<li class="btn-color yellow" title="Yellow brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-yellow" value="#ffe000">
+				<label for="brush-yellow"></label>
+			</li>
+			<li class="btn-color black" title="Black brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-black" value="#000000">
+				<label for="brush-black"></label>
+			</li>
+			<li class="btn-color colorful" title="Colorful brush">
+				<input class="rad-brush" type="radio" name="brush-color" id="brush-colorful" checked="" value="colorful">
+				<label for="brush-colorful"></label>
+			</li>
+		</ul>
+		<canvas id="workspace" width="1000" height="500"></canvas>
+
+		<center class="footer">
+			Canvas Pen - Developed by <a target="_blank" href="http://www.imageglass.org/about">d2phap</a>
+		</center>
+	</div>
+
+
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

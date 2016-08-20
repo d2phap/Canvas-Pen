@@ -1,0 +1,218 @@
+html {
+	box-sizing: border-box;
+	font-family: 'Segoe UI';
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #f2f2f2;
+	margin: 0 auto;
+}
+.footer {
+	margin-top: 20px;
+	font-size: 14px;
+}
+.app {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#toolbar {
+	padding: 0 10px;
+	margin: 0 auto 10px auto;
+	list-style: none;
+	height: 50px;
+	background-color: #fff;
+	border-bottom: 1px solid #f2f2f2;
+	border-radius: 2px;
+
+	display: flex;
+	justify-content: flex-end;
+}
+#toolbar > li {
+	width: 50px;
+	height: 100%;
+	padding: 10px;
+}
+#toolbar > li.left {
+	margin-right: auto;
+}
+#toolbar > li.btn > label {
+	border: 1px dashed #ccc;
+
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+#toolbar > li.btn > label::before,
+#toolbar > li.btn > label::after {
+	content: "";
+	display: block;
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+#toolbar > li.btn-save > label::before {
+	width: 18px;
+	height: 18px;
+	border: 3px solid #808080;
+	border-top-width: 9px;
+	border-radius: 1px;
+	border-bottom-width: 1px;
+}
+#toolbar > li.btn-save > label::after {
+	width: 8px;
+	height: 5px;
+	background-color: #fff;
+	top: -11px;
+	right: -4px;
+}
+#toolbar > li.btn-eraser > label::before {
+	width: 18px;
+	height: 9px;
+
+	border: 1px solid #808080;
+	border-right-width: 12px;
+	border-radius: 1px;
+
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+#toolbar > li.btn > label:active {
+	border-color: transparent;
+	border-radius: 100%;
+	-webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+
+	-webkit-transition: all 50ms ease-in;
+	-moz-transition: all 50ms ease-in;
+	transition: all 50ms ease-in;
+}
+
+#toolbar > li > input[type=radio] + label {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 2px;
+
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+#toolbar > li > input[type=radio] {
+	position: absolute;
+	top: -999999999px;
+}
+#toolbar > li > input[type=radio]:checked + label {
+	position: relative;
+	border-radius: 100%;
+	-webkit-box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.6);
+}
+#toolbar > li > input[type=radio] + label::before {
+	content: "";
+	position: absolute;
+	top: -99999999px;
+}
+#toolbar > li > input[type=radio]:checked + label::before {
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 10px;
+	border-left: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	top: 6px;
+	left: 0;
+	right: 0;
+	margin: auto; 
+
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+
+	-webkit-transition: all 200ms ease-in;
+	-moz-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+
+#toolbar > li.blue > label {
+	background-color: #00bfff;
+}
+#toolbar > li.red > label {
+	background-color: #ff1556;
+}
+#toolbar > li.green > label {
+	background-color: #39bd68;
+}
+#toolbar > li.purple > label {
+	background-color: #c000ff;
+}
+#toolbar > li.yellow > label {
+	background-color: #ffe000;
+}
+#toolbar > li.black > label {
+	background-color: #000000;
+}
+#toolbar > li.colorful > label {
+	background-color: #000000;
+	background: -moz-linear-gradient(-45deg,  #e56414 22%, #39bd68 76%);
+	background: -webkit-linear-gradient(-45deg,  #e56414 22%,#39bd68 76%);
+	background: linear-gradient(135deg,  #e56414 22%,#39bd68 76%);
+}
+#workspace {
+	background-color: #fff;
+	display: block;
+	margin: auto;
+	cursor: none;
+}
+
+
+
+/*CSS for TOUCH screen*/
+.touch #toolbar {
+	height: 80px;
+}
+.touch #toolbar > li {
+	width: 80px;
+}
+.touch #toolbar > li.btn-save > label::before {
+	width: 35px;
+	height: 35px;
+	border: 4px solid #808080;
+	border-top-width: 17px;
+	border-bottom-width: 1px;
+}
+.touch #toolbar > li.btn-save > label::after {
+	width: 15px;
+	height: 8px;
+	top: -26px;
+	right: -9px;
+}
+.touch #toolbar > li.btn-eraser > label::before {
+	width: 35px;
+	height: 19px;
+	border-right-width: 24px;
+}
+.touch #toolbar > li > input[type=radio]:checked + label::before {
+	width: 30px;
+	height: 15px;
+	border-left: 8px solid #fff;
+	border-bottom: 8px solid #fff;
+	top: 20px;
+}
+.touch #toolbar > li.btn > label:active,
+.touch #toolbar > li > input[type=radio]:checked + label {
+	-webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.6);
+	box-shadow: 0 0 0 4px rgba(0,0,0,0.6);
+}
